@@ -1,0 +1,345 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mi crochet</title> 
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body bgcolor="#D9BCE5"> 
+	
+	<header>
+	<nav>
+     <ul class="menu">
+     <li><a href="#INICIO"> INICIO</a></li>	
+     <li><a href="#NUESTROS PRODUCTOS"> NUESTROS ARTICULOS</a></li>
+     <li><a href="#APRENDE CON NOSOTROS"> APRENDE CON NOSOTROS</a></li>
+     <li><a href="#CONTACTANOS"> CONTACTANOS </a></li>
+     <li><a href="#PUNTUANOS">PUNTUANOS</a></li>	
+     <li><a href="#COMPRA"> COMPRA</a></li>
+ </ul>
+</nav>
+    </header>
+   <br><center><img src="logo1.PNG"></center>
+
+<br> <br><br>
+     
+     <div class="parrafo"id="INICIO"></div>
+	
+     <center><h1>EN "MI CROCHET" NOS ESPECIALIZAMOS EN COSAS DIFERENTES HECHAS A CROCHET O A TEJIDO , EN NUESTRA PAGINA ENCONTRARAS DIFERENTES TIPOS DE BOLSAS PARA TUS ARTICULOS ASI COMO BOLSAS PARA DAMA Y ALGUNOS AMIGURUMIS QUE PUEDES UTILIZAR COMO LLAVEROS O DECORACIONES PARA EL HOGAR , CADA UNO DE NUESTROS ARTICULOS SON HECHOS ESPECIALMENTE A MANO ASI COMO TAMBIEN PODRAS APRENDER ALGUNAS COSAS DE CROCHET BASICO PARA QUE PUEDAS HACER TUS PROPIAS COSAS  
+     </h1>
+
+     	<BR><BR>
+
+     </h1></center>
+     <BR> <BR>
+    </div>
+
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet" href="font.css">
+</head>
+<body>
+	<a href="https://api.whatsapp.com/send?phone=6643106927" class="btn-wsp" target="_blank">
+		<i class="icon-whatsapp">
+	</a>
+	
+	</body>
+	</html>
+
+<!--carrete de imagenes--->
+
+<html>
+    <head>
+       
+        <meta charset="UTF-8">
+        <link href="estilo.css" rel="stylesheet" type="text/css" />
+    </head> 	
+    <div id="NUESTROS PRODUCTOS">
+    <body>
+   
+        <div id="carrusel-contenido">
+            <div id="carrusel-caja">
+                <div class="carrusel-elemento">
+                    <img class="imagenes" src="prueba.PNG" >
+                </div>
+                <div class="carrusel-elemento">   
+                    <img class="imagenes" src="prueba.PNG">
+                </div>
+                <div class="carrusel-elemento">   
+                    <img class="imagenes" src="prueba.PNG">                        
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<!--contactanos--->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+ <div id="CONTACTANOS">
+<h2><center> para bolsas personalizadas , amigurumis que no esten en venta o lo que puedas imaginar <br>!CONTACTATE¡ <br> y crearemos lo que imagines , el precio dependera del tamaño y la complejidad que se necesite <br>
+para mas informacion detallada escribenos por SMS al : <br><br>
+tel: 687 181 8858
+ </h2>
+<br><br></center>
+<center><h2> o visitanos en nuestra ubicacion :
+</h2><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.1902669250035!2d-116.8647885853184!3d32.46760230700561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d93eecfa056711%3A0x42e12b48e069d3aa!2sCECYTEBC%20EL%20FLORIDO!5e0!3m2!1ses-419!2smx!4v1653280616439!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+    </div>
+
+ <div id="PUNTUANOS">
+ 	
+ <h1>Califica nuestra pagina web</h1>
+
+     <h3>Dejanos tu calificacion</h3>
+    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1estrella"></span>
+    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2estrella"></span>
+    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3estrella"></span>
+    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4estrella"></span>
+    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5estrella"></span>
+    <br><br>
+<button class="btn btn-primary" onclick="Mensaje()">Puntuar</button>
+</div>
+    </div>
+</div>
+ <!--seccion de comentarios-->
+ <br><br> <br><br>
+<center>
+  <div class="col-md-4">
+            <div class="alert alert-light"><h4>Comentarios</h4></div>
+            </div>
+            <div id="result">
+</div>
+ <div class="col-md-8">
+        <form>
+            <div class="form-group">
+            <label>Nombre</label>
+            <input class="form-control" type="text"  id="name">
+            </div>
+            <div class="form-group">
+            <label>Comentario</label>
+            <textarea id="comment" class="form-control"></textarea></label>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="commentBox();">Enviar</button>
+        </form>
+    </div>
+    </div>
+    </div>
+<script>
+    function getexpirydate( nodays){
+var UTCstring;
+Today = new Date();
+nomilli=Date.parse(Today);
+Today.setTime(nomilli+nodays*24*60*60*1000);
+UTCstring = Today.toUTCString();
+return UTCstring;
+}
+
+function getcookie(cookiename) {
+var cookiestring=""+document.cookie;
+var index1=cookiestring.indexOf(cookiename);
+if (index1==-1 || cookiename=="") return "";
+var index2=cookiestring.indexOf(";",index1);
+if (index2==-1) index2=cookiestring.length;
+return unescape(cookiestring.substring(index1+cookiename.length+1,index2));
+}
+function setcookie(name,value,duration){
+cookiestring=name+"="+escape(value)+";EXPIRES="+getexpirydate(duration);
+document.cookie=cookiestring;
+if(!getcookie(name)){
+return false;
+}
+else{
+return true;
+}
+}
+count= getcookie("counter");
+if(isNaN(count)){
+y=setcookie("counter",0,1);
+count=0;
+}
+count++;
+document.write("Visitantes: "+count+ "");
+y=setcookie("counter",count,1);
+// fin de obtencion de cookie
+// -->
+</script>
+</body>
+</html>
+
+
+ </div>
+
+ <div id="COMPRA">
+ 	
+
+ </div>
+</body>
+</html>
+ <<!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title></title>
+ </head>
+ <body>
+ 
+const $tiempo = document.querySelector('.tiempo'),
+$fecha = document.querySelector('.fecha');
+
+function digitalClock(){
+    let f = new Date(),
+    dia = f.getDate(),
+    mes = f.getMonth() + 1,
+    anio = f.getFullYear(),
+    diaSemana = f.getDay();
+
+    dia = ('0' + dia).slice(-2);
+    mes = ('0' + mes).slice(-2)
+
+    let timeString = f.toLocaleTimeString();
+    $tiempo.innerHTML = timeString;
+
+    let semana = ['DOM','LUN','MAR','MIE','JUE','VIE','SAB'];
+    let showSemana = (semana[diaSemana]);
+    $fecha.innerHTML = `${anio}-${mes}-${dia} ${showSemana}`
+}
+setInterval(() => {
+    digitalClock()
+}, 1000);
+//puntuanos
+      var contador;
+      function calificar(item){
+        console.log(item);
+        contador=item.id[0];
+        let nombre = item.id.substring(1);
+        for(let i=0;i<5;i++){
+          if(i<contador){
+            document.getElementById((i+1)+nombre).style.color="orange";
+
+          }else{
+            document.getElementById((i+1)+nombre).style.color="black";
+          }
+        }
+      }
+      function Mensaje(){
+        alert("Gracias por calificar nuestra pagina web " +contador+ " estrellas");
+      }
+
+function commentBox(){
+  var name=document.getElementById('name').value;
+  var comment=document.getElementById('comment').value;
+ 
+  if(name =="" || comment ==""){
+    alert("Porfavor introduce la informacion requerida!");
+  }else{
+    var parent=document.createElement('div');
+    var el_name=document.createElement('h5');
+    var el_message=document.createElement('p');
+    var el_line=document.createElement('hr');
+    var txt_name=document.createTextNode(name);
+    var txt_message=document.createTextNode(comment);
+    el_name.appendChild(txt_name);
+    el_message.appendChild(txt_message);
+    el_line.style.border='1px solid #000';
+    parent.appendChild(el_name);
+    parent.appendChild(el_line);
+    parent.appendChild(el_message);
+    parent.setAttribute('class', 'pane');
+    document.getElementById('result').appendChild(parent);
+ 
+    document.getElementById('name').value="";
+    document.getElementById('comment').value="";
+  }
+ 
+}
+
+PHP*
+<!DOCTYPE html>
+<html>
+<head>
+<title>Acceso al sistema</title>
+    <div class="titulo"><br><br><br>
+        <h1>Registrate aqui!</h1>
+</div><br><br><br>
+<script type="text/javascript">
+function accesoPermitido(){
+window.location.href="proyecto.html";
+ alert(" Tu registro ha sido exitoso")
+}
+function accesoDenegado(){
+//alert ("AccesoDenegado");
+document.getElementById( 'mensaje').innerHTML= 'Acceso Denegado';
+window.location.href="#";
+}
+function mensajeError(){
+document.getElementById( 'mensaje').innerHTML= 'favor de no dejar campos vacios';
+window.location.href="#";
+}
+</script>
+</head>
+<body align="center">
+<form action=""method="post" class="registro">
+<div>
+<label>Usuario:</label>
+<input type="text" name="usuario">
+</div><br>
+<div>
+<label>Contraseña:</label>
+<input type="password" name="password">
+</div>
+<div><br>
+<input type="submit" name="enviar" value="Acceso">
+</div>
+<p id="mensaje" class="error">
+</p>
+</form>
+</body>
+</html>
+
+<?php
+if(isset($_POST['enviar'])){
+$usuario=$_POST['usuario'];
+$pass=$_POST['password'];
+if($usuario=='' or $pass==''){
+echo "<script>mensajeError(); </script>";
+}else{
+if ($usuario=="equipo" & $pass=="11") {
+session_start();
+$_SESSION['sesion']="si";
+echo "<script>accesoPermitido(); </script>";
+}else{
+echo "<script>accesoDenegado(); </script>";
+}
+}
+}
+?>
+
+ 
+ </body>
+ </html>
+
+
+

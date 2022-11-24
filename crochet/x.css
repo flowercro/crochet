@@ -1,0 +1,371 @@
+*{
+margin: 0;
+padding: 0;
+}
+html{
+scroll-behavior: smooth;
+}
+
+header{
+width: 100%;
+background: black;
+height: 70px;
+position:fixed;
+}
+section {
+position:fixed;
+top:0;
+left:0;
+display:flex;
+}
+.reloj{
+display:inline-block;
+background:black;
+color:#fff;
+text-align: center;
+padding:17px;
+font-size:20px;
+border-radius:1px;
+
+box-shadow: -8px -8px 15px rgba(255,255,255,0.5),
+10px 10px 10px rgba(0,0,0,0.1),
+inset -8px -8px 15px rgba(255,255,255,0.5),
+inset 10px 10px 10px rgba(0,0,0,0.1);
+}
+.fecha{
+    letter-spacing: 0.1em;
+    font-size: 10px;
+}
+
+.tiempo{
+    letter-spacing: 0.05em;
+    font-size: 20px;
+    padding: 1px 0;
+}
+/* aqui estamos modificando el menu*/
+
+.menu{
+width: 80%;
+height: 70px;
+/* background: red;*/
+margin: auto;
+}
+
+.logo{
+width: 30%;
+height: 70px;
+/* background: blue;*/
+float: left;
+padding-top: 10px;
+box-sizing: border-box;
+
+}
+.logo p a{
+color: #fff;
+font-size: 40px;
+text-decoration: none;
+font-weight: bold;
+font-family: play;
+
+}
+nav{
+width: 70%;
+height: 70px;
+/*background: olive;*/
+
+    float: left;
+    text-align: right;
+    padding-top: 24px ;
+    box-sizing: border-box;
+}
+nav ul li{
+display: inline;
+}
+nav ul li a{
+color: #fff;
+font-size: 13px;
+text-decoration: none;
+text-transform: uppercase;
+padding-left: 20px;
+font-weight: bold;
+letter-spacing: 1px;
+font-family: rale;
+}
+nav ul li a:hover{
+color: #444;
+}
+@font-face{
+font-family: rale;
+font-family: Play;
+src: url(fuentes/Raleway-regular.ttf);
+src: url(fuentes/PlayfairDisplay.ttf);
+}
+
+
+.imagen_fondo{
+background-image: url(img/portada.jpg);
+background-attachment: fixed;
+background-size: cover;
+height: 50em;
+}
+.parrafo{
+text-align: center;
+}
+.parrafo h1{
+text-align: center;
+font-family: Impact;
+color: black;
+font-size: 50px;
+}
+.parrafo p{
+color: black;
+font-size: 1.2rem;
+margin:0;
+padding-right: 1rem;
+font-family: cursive;
+}
+.imagen1{
+background-image: url(img/imagen1.jpg);
+background-attachment: fixed;
+background-size: cover;
+height: 30em;
+font-weight: bold;
+}
+.pServicios{
+    background: white;
+color: black;
+text-align: center;
+font-size: 20px;
+font-family: Courier New;
+}
+.pServicios H2{
+font-family: sans-serif;
+font-size: 30px;
+}
+.pServicios h3{
+font-family: sans-serif;
+font-size: 20px;
+
+}
+.imagenS{
+background-image: url(img/imagenServicios.jpg);
+background-attachment: fixed;
+background-size: cover;
+height: 20em;
+}
+.contacto{
+background: black;
+color: white;
+text-align: center;
+font-family: courier new;
+}
+.registrarse{
+background: white;
+color: black;
+}
+.registrarse a{
+border: 1px solid black;
+padding: 15px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 30px;
+    color: goldenrod;
+}
+.registrarse a:hover{
+background-color: goldenrod;
+color: black;
+}
+.calificanos{
+background: white;
+color: black;
+}
+
+JAVA SCRIPT*
+
+const $tiempo = document.querySelector('.tiempo'),
+$fecha = document.querySelector('.fecha');
+
+function digitalClock(){
+    let f = new Date(),
+    dia = f.getDate(),
+    mes = f.getMonth() + 1,
+    anio = f.getFullYear(),
+    diaSemana = f.getDay();
+
+    dia = ('0' + dia).slice(-2);
+    mes = ('0' + mes).slice(-2)
+
+    let timeString = f.toLocaleTimeString();
+    $tiempo.innerHTML = timeString;
+
+    let semana = ['DOM','LUN','MAR','MIE','JUE','VIE','SAB'];
+    let showSemana = (semana[diaSemana]);
+    $fecha.innerHTML = `${anio}-${mes}-${dia} ${showSemana}`
+}
+setInterval(() => {
+    digitalClock()
+}, 1000);
+//puntuanos
+      var contador;
+      function calificar(item){
+        console.log(item);
+        contador=item.id[0];
+        let nombre = item.id.substring(1);
+        for(let i=0;i<5;i++){
+          if(i<contador){
+            document.getElementById((i+1)+nombre).style.color="orange";
+
+          }else{
+            document.getElementById((i+1)+nombre).style.color="black";
+          }
+        }
+      }
+      function Mensaje(){
+        alert("Gracias por calificar nuestra pagina web " +contador+ " estrellas");
+      }
+
+function commentBox(){
+  var name=document.getElementById('name').value;
+  var comment=document.getElementById('comment').value;
+ 
+  if(name =="" || comment ==""){
+    alert("Porfavor introduce la informacion requerida!");
+  }else{
+    var parent=document.createElement('div');
+    var el_name=document.createElement('h5');
+    var el_message=document.createElement('p');
+    var el_line=document.createElement('hr');
+    var txt_name=document.createTextNode(name);
+    var txt_message=document.createTextNode(comment);
+    el_name.appendChild(txt_name);
+    el_message.appendChild(txt_message);
+    el_line.style.border='1px solid #000';
+    parent.appendChild(el_name);
+    parent.appendChild(el_line);
+    parent.appendChild(el_message);
+    parent.setAttribute('class', 'pane');
+    document.getElementById('result').appendChild(parent);
+ 
+    document.getElementById('name').value="";
+    document.getElementById('comment').value="";
+  }
+ 
+}
+
+PHP*
+<!DOCTYPE html>
+<html>
+<head>
+<title>Acceso al sistema</title>
+    <div class="titulo"><br><br><br>
+        <h1>Registrate aqui!</h1>
+</div><br><br><br>
+<script type="text/javascript">
+function accesoPermitido(){
+window.location.href="proyecto.html";
+ alert(" Tu registro ha sido exitoso")
+}
+function accesoDenegado(){
+//alert ("AccesoDenegado");
+document.getElementById( 'mensaje').innerHTML= 'Acceso Denegado';
+window.location.href="#";
+}
+function mensajeError(){
+document.getElementById( 'mensaje').innerHTML= 'favor de no dejar campos vacios';
+window.location.href="#";
+}
+</script>
+</head>
+<body align="center">
+<form action=""method="post" class="registro">
+<div>
+<label>Usuario:</label>
+<input type="text" name="usuario">
+</div><br>
+<div>
+<label>Contraseña:</label>
+<input type="password" name="password">
+</div>
+<div><br>
+<input type="submit" name="enviar" value="Acceso">
+</div>
+<p id="mensaje" class="error">
+</p>
+</form>
+</body>
+</html>
+
+<?php
+if(isset($_POST['enviar'])){
+$usuario=$_POST['usuario'];
+$pass=$_POST['password'];
+if($usuario=='' or $pass==''){
+echo "<script>mensajeError(); </script>";
+}else{
+if ($usuario=="equipo" & $pass=="11") {
+session_start();
+$_SESSION['sesion']="si";
+echo "<script>accesoPermitido(); </script>";
+}else{
+echo "<script>accesoDenegado(); </script>";
+}
+}
+}
+?>
+<style>
+*{
+Font-size: 14px;
+Font-family: sans-serif;
+
+}
+Form.registro{
+Background: none repeat scroll 0 0 #F1F1F1;
+Border:1px solid #DDDDDD;
+Margin: 0 auto;
+Padding: 20px;
+Width: 278px;
+Box-shadow: 0px 0px 20px black;
+Border-radius: 10px;
+Position: relative;
+Top: 30px;
+}
+Form.registro div{
+Margin-botton: 15px;
+Overflow: hidden;
+}
+Form.registro div label{
+Display: block;
+Float: left;
+Line-height: 25px;
+}
+
+Form.registro div input[type="text"],
+Form.registro div input[type="password"]{
+Border: 1px solid #DCDCDC;
+Float: right;
+Padding: 4px;
+}
+Form.registro div input[type="submit"]{
+Background: none repeat scroll 0 0 #DEDEDE;
+Border: 1px solid #C6C6C6;
+Float: right;
+Font-weight:bold;
+Padding:4px 20px;
+}
+.error{
+Color:red;
+Font-weight:bold;
+Margin: 10px;
+Text-align: center;
+}
+.titulo{
+    background: black;
+    color: white;
+}
+.titulo h1{
+    font-family: Courier New;
+    font-size: 50px;
+}
+</style>
+
